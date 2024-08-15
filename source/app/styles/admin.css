@@ -1,0 +1,11 @@
+.cf-complex__groups .cf-complex__tabs--tabbed-vertical {
+	order: 1;
+	margin-right: 0;
+	margin-left: -1px;
+}
+
+.cf-complex__groups
+	.cf-complex__tabs-item--tabbed-vertical.cf-complex__tabs-item--current {
+	border-left-color: #fff !important;
+	border-right-color: #e2e4e7 !important;
+}

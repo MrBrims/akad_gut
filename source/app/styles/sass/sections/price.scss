@@ -1,0 +1,17 @@
+.price {
+	@include fluidPaddingT(40px, 60px, 480px, 1024px, 60px);
+	@include fluidPaddingB(40px, 60px, 480px, 1024px, 60px);
+	position: relative;
+	overflow-x: hidden;
+}
+
+.fach .price::before {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.price {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}

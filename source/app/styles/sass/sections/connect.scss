@@ -1,0 +1,154 @@
+.connect {
+	margin-top: 0;
+
+	&__items {
+		--gap: 15px;
+		--elements: 4;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap);
+	}
+
+	&__item {
+		width: $layout;
+	}
+
+	&__item-inner {
+		border-radius: 8px;
+		border: 1px solid #E5E5E5;
+		background: #FFF;
+		margin-bottom: 20px;
+	}
+
+	&__item-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+	}
+
+	&__item-title {
+		margin-bottom: 16px;
+		color: #325D9C;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		text-transform: uppercase;
+		font-family: $titlefont;
+	}
+
+	&__item-box {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #f3f8ff;
+
+		p {
+			margin-bottom: 0 !important;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		a {
+			text-decoration: none !important;
+		}
+	}
+
+	&__item-phone {
+		@include hover;
+	}
+
+	&__item-mail {
+		color: #325D9C;
+		text-decoration-line: underline;
+		@include hover;
+	}
+
+	&__item-phone,
+	&__item-address,
+	&__item-time {
+		color: #002E5D;
+		text-align: center;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	&__item-btn {
+		display: flex;
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 2px;
+		border: 1px solid $red;
+		background: #FFF;
+		color: $red;
+		cursor: pointer;
+		transition: background-color .3s ease-in-out, color .3s ease-in-out;
+		text-decoration: none !important;
+
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+
+	&__item-text {
+		color: #325D9C;
+		font-family: $titlefont;
+		font-size: 16px;
+		line-height: 24px;
+		text-transform: uppercase;
+
+		span {
+			text-transform: none;
+			font-family: $userfont;
+		}
+	}
+
+	&__whats-btn {
+		display: flex;
+		padding-left: 25px;
+		height: 50px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		color: #fff;
+		border-radius: 4px;
+		background-color: #1BD741;
+		@include hover;
+
+		&::before {
+			@include bgbefore;
+			left: 25px;
+			width: 32px;
+			height: 32px;
+			background-image: url(../images/icons/whatsapp-white.svg);
+		}
+	}
+}
+
+@media (max-width:980px) {
+	.connect {
+		&__items {
+			--elements: 3;
+		}
+	}
+}
+
+@media (max-width:740px) {
+	.connect {
+		&__items {
+			--elements: 2;
+		}
+	}
+}
+
+@media (max-width:480px) {
+	.connect {
+		&__items {
+			--elements: 1;
+		}
+	}
+}

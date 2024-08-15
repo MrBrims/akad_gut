@@ -1,0 +1,92 @@
+.price-list {
+    @include fluidPaddingT(40px, 70px, 480px, 1024px, 70px);
+    @include fluidPaddingB(40px, 70px, 480px, 1024px, 70px);
+    position: relative;
+    overflow-x: hidden;
+
+    &::before {
+        content: "";
+        top: 0;
+        left: -320px;
+        position: absolute;
+        height: 100%;
+        width: 1920px;
+        background-color: #FBFCFF;
+        z-index: -1;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+        color: $titlecolor;
+        user-select: none;
+    }
+
+    thead tr {
+        background-color: #F3F8FF;
+    }
+
+    &__table-th {
+        border: 1px solid #BBD1DC;
+        font-size: 12px;
+        padding: 6px 16px;
+        text-align-last: left;
+        font-weight: 400;
+        &:last-child {
+            width: 10%;
+        }
+    }
+
+    &__table-td {
+        border: 1px solid #BBD1DC;
+        font-family: $titlefont;
+        padding: 12px 16px;
+    }
+
+    &__table-name {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__table-time {
+        font-size: 14px;
+        min-width: 80px;
+    }
+
+    &__table-num {
+        font-size: 24px;
+        font-weight: 700;
+        min-width: 130px;
+    }
+
+    &__table-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 145px;
+        height: 45px;
+        border-radius: 2px;
+        border: 1px solid #F70431;
+        text-transform: uppercase;
+        color: red;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+
+}
+
+@media (max-width:760px) {
+    .price-list {
+        &__table {
+            min-width: 700px;
+        }
+        &__wrapper {
+            overflow-x: auto;
+        }
+
+    }
+}

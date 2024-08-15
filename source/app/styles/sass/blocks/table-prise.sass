@@ -1,0 +1,75 @@
+.table-prise
+	border-collapse: collapse
+	width: 100%
+	margin-bottom: clamp(3.125rem, 3.125vw + 2.5rem, 6.25rem)
+
+	th,
+	td
+		border: 1px solid #BBD1DC
+		padding: 6px 16px
+
+	th
+		text-align: left
+		font-weight: 400
+		background-color: #F3F8FF
+		font-size: 12px
+
+	td
+		font-weight: 500
+		color: #002E5D
+		vertical-align: middle
+		position: relative
+		padding-left: 20px
+
+		&::before
+			content: "\1F784"
+			position: absolute
+			left: 8px
+			top: 50%
+			transform: translateY(-50%)
+
+		&[rowspan]::before
+			display: none
+			padding-left: 16px
+
+	&__num,
+	&__time
+		display: inline-block
+		width: 100%
+		text-align: center
+
+	&__num
+		font-size: 24px
+		font-weight: 700
+		margin-bottom: 5px
+
+	&__time
+		font-size: 12px
+		font-weight: 400
+		margin-bottom: 16px
+
+	&__btn
+		margin: 0 auto
+
+@media (max-width: 880px)
+	.table-prise
+		thead,
+		tr,
+		th,
+		td
+			display: block
+
+		tbody,
+		tr
+			display: flex
+			flex-direction: column
+
+		td[rowspan]
+			order: -1
+
+		th,
+		td
+			margin-bottom: 4px
+
+		th:last-child
+			display: none

@@ -1,0 +1,48 @@
+.resp-rev {
+	&__inner {
+		padding: 10px;
+		border: 1px solid #bbd1dc;
+		border-radius: 5px;
+		min-height: 300px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__body,
+	&__slider,
+	&__slide {
+		height: fit-content;
+	}
+
+	&__link {
+		font-size: 18px;
+		font-weight: 700;
+		color: $titlecolor;
+		margin-bottom: 7px;
+		display: inline-block;
+	}
+
+	&__star-box {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		margin-bottom: 12px;
+	}
+
+	&__text p {
+		font-size: 15px;
+		margin-bottom: 7px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__footer {
+		margin-top: auto;
+		display: flex;
+		justify-content: space-between;
+		gap: 7px;
+	}
+}

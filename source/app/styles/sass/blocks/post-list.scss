@@ -1,0 +1,103 @@
+.post-list {
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    padding: 16px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+
+    &__thumb-box {
+        flex-shrink: 0;
+        max-width: 290px;
+
+        img {
+            object-fit: cover;
+            max-height: 240px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        @include hover;
+
+        a {
+            color: $titlecolor;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__cat {
+        border-radius: 2px;
+        background: #F3F8FF;
+        padding: 2px 8px;
+    }
+
+    &__date {
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/date-icon.svg);
+        }
+    }
+
+    &__auth {
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/aut-icon.svg);
+        }
+    }
+
+    &__exp {
+        margin-bottom: 20px;
+        overflow: hidden;
+        color: $textcolor;
+        text-overflow: ellipsis;
+        font-size: 16px;
+    }
+
+    &__btn {
+        padding: 16px 30px;
+        border-radius: 2px;
+        border: 1px solid #F70431;
+        background: #FFF;
+        text-transform: uppercase;
+        @include hover;
+        display: block;
+        max-width: fit-content;
+        color: $red;
+    }
+}
+
+@media (max-width:640px) {
+    .post-list {
+        flex-direction: column;
+
+        &__thumb-box {
+            max-width: 100%;
+
+            img {
+                @include fluidMaxHeight(200px, 400px, 480px, 1200px, 500px)
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.form-counter {
+  display: flex;
+}
+
+.counter-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid #BBD1DC;
+  background: #f3f8ff;
+
+  &:first-child {
+    border-radius: 2px 0 0 2px;
+  }
+
+  &:last-child {
+    border-radius: 0 2px 2px 0;
+  }
+}
+
+.count-input.input {
+  text-align: center;
+  font-weight: 700;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}

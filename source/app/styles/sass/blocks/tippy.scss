@@ -1,0 +1,19 @@
+.tippy-box[data-theme~='tomato'] {
+	background-color: #fff;
+	font-size: 13px;
+	box-shadow: -8px 5px 10px rgba(0, 0, 0, 0.20);
+	color: $textcolor;
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='top']>.tippy-arrow::before {
+	border-top-color: #fff;
+}
+
+.tippy-box h4 {
+	color: #002E5D;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}

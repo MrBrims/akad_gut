@@ -1,0 +1,206 @@
+.form {
+	user-select: none;
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 15px 20px;
+	}
+
+	&__item-middle {
+		flex: 1 1 320px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__item-little {
+		flex: 1 1 190px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__item-full {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	&__item-sidebar {
+		flex: 1 1 120px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__item-full {
+		width: 100%;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 18px;
+		color: #002e5d;
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	&__marking {
+		font-size: 9px;
+	}
+
+	&__file-custom-big {
+		position: relative;
+		color: $textcolor;
+		height: 86px;
+		border: 1px dashed #bbd1dc;
+		cursor: pointer;
+		padding: 15px;
+		background-color: #fbfcff;
+		font-size: 12px;
+		border-radius: 2px;
+
+		&.loaded {
+			color: #000000;
+		}
+
+		input {
+			display: none;
+		}
+	}
+
+	&__file-custom {
+		position: relative;
+		color: #bbd1dc;
+
+		&.loaded {
+			color: #000000;
+		}
+
+		input {
+			display: none;
+		}
+
+		&::before {
+			@include bgbefore;
+			width: 40px;
+			height: 40px;
+			right: 0;
+			background-image: url(../images/icons/file-form.svg);
+			background-color: $accent;
+			cursor: pointer;
+			border-radius: 0 2px 2px 0;
+			background-size: 16px;
+		}
+	}
+
+	&__file-place {
+		position: relative;
+		padding-left: 20px;
+
+		&::before {
+			content: "";
+			@include bgbefore;
+			width: 12px;
+			height: 12px;
+			left: 0;
+			background-image: url(../images/icons/upload.svg);
+		}
+	}
+
+	&__required-field {
+		color: $red;
+	}
+
+	&__tippy {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-image: url(../images/icons/question.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		border-radius: 50%;
+		cursor: pointer;
+		margin-left: 5px;
+		margin-bottom: -1px;
+	}
+
+	&__date-custom {
+		position: relative;
+
+		&::before {
+			@include bgbefore;
+			width: 40px;
+			height: 40px;
+			right: 0;
+			background-image: url(../images/icons/calendar.svg);
+			background-color: $accent;
+			cursor: pointer;
+			border-radius: 0 2px 2px 0;
+		}
+	}
+
+	&__time-custom {
+		position: relative;
+
+		&::before {
+			@include bgbefore;
+			width: 40px;
+			height: 40px;
+			right: 0;
+			background-image: url(../images/icons/time-label.svg);
+			background-color: $accent;
+			background-size: 25px;
+			cursor: pointer;
+			border-radius: 0 2px 2px 0;
+		}
+	}
+
+	&.--sending {
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-color: rgba(255, 255, 255, 0.6);
+			z-index: 90;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image: url(../images/icons/refresh.svg);
+			background-position: center center;
+			background-size: 100px;
+			background-repeat: no-repeat;
+			opacity: 0.7;
+			z-index: 100;
+			animation: refreshForm infinite 2s;
+		}
+	}
+
+	&__btn {
+		border: none;
+		margin: 0 auto;
+	}
+}
+
+@keyframes refreshForm {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 400px) {
+	.form {
+		label.form__file-custom {
+			font-size: 11px;
+		}
+	}
+}

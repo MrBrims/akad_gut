@@ -1,0 +1,4 @@
+{
+	// Открытие рабочей папки при открытии терминала
+	"terminal.integrated.cwd": "${workspaceFolder}/source"
+}

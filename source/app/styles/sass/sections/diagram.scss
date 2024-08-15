@@ -1,0 +1,134 @@
+.diagram {
+
+    &__title {
+        clear: both;
+    }
+
+    &__list {
+        --gap: 30px;
+        --elements: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style-type: none;
+        gap: var(--gap);
+        margin-bottom: 30px;
+        list-style-type: none !important;
+    }
+
+    &__list li {
+        position: relative;
+        padding-left: 64px;
+        width: $layout;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-image: url(../images/icons/diagram-list.svg);
+        }
+    }
+
+    &__img {
+        @include fluidMarginB(40px, 60px, 480px, 1024px, 60px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__subtitle {
+        max-width: fit-content;
+        position: relative;
+        padding-right: 70px;
+        color: $titlecolor;
+        margin-bottom: 25px;
+
+        &::after {
+            @include bgbefore;
+            right: 0;
+            width: 65px;
+            height: 65px;
+            background-image: url(../images/icons/diagram-title-icon.svg);
+        }
+    }
+
+    &__items {
+        --gap: 15px;
+        --elements: 4;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+    }
+
+    &__item {
+        width: $layout;
+        display: flex;
+        padding: 16px 10px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid #BBD1DC;
+        background: #FFF;
+    }
+
+    &__item-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+    }
+
+    &__item-box {
+        background-image: url(../images/icons/diagram-card-decor.svg);
+        width: 40px;
+        height: 40px;
+        position: relative;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        flex-shrink: 0;
+    }
+
+    &__item-text {
+        color: $titlefont;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width:1000px) {
+    .diagram {
+        &__items {
+            --elements: 2;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:580px) {
+    .diagram {
+
+        &__items,
+        &__list {
+            --elements: 1;
+        }
+    }
+}
+
+@media (max-width:380px) {
+    .diagram {
+
+        &__subtitle {
+            padding-right: 45px;
+
+            &::after {
+                width: 40px;
+                height: 40px;
+                background-size: 40px;
+            }
+        }
+    }
+}

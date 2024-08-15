@@ -1,0 +1,43 @@
+.search-form
+	display: block
+	position: relative
+	max-width: 60%
+	margin-left: auto
+
+	&__input
+		height: 32px
+		display: block
+		border: 1px solid #BBD1DC
+		border-radius: 3px
+		padding: 10px
+
+		&::placeholder
+			color: #325D9C
+			font-size: 14px
+
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		right: 0
+		top: 0
+		width: 32px
+		height: 32px
+		background-color: #325D9C
+		border-radius: 0 2px 2px 0
+
+		svg
+			width: 16px
+			height: 16px
+
+	&__submit
+		clip: rect(0 0 0 0)
+		height: 1px
+		overflow: hidden
+		position: absolute
+		width: 1px
+
+@media (max-width:760px)
+	.search-form
+		max-width: 100%

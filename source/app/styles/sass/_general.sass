@@ -1,0 +1,174 @@
+// GENERAL PROJECT STYLES
+*
+	-webkit-tap-highlight-color: transparent
+
+html
+	scroll-behavior: smooth
+
+body.--lock
+	overflow: hidden
+
+h1,
+h2,
+h3,
+h4
+	font-family: $titlefont
+	font-weight: 600
+	line-height: 1.2
+
+h1
+	@include fluidFontSize(30px, 56px, 480px, 1280px, 26px)
+
+h2
+	@include fluidFontSize(26px, 40px, 480px, 1280px, 40px)
+
+h3
+	@include fluidFontSize(24px, 30px, 480px, 1280px, 30px)
+
+h4
+	@include fluidFontSize(20px, 26px, 480px, 1280px, 26px)
+
+textarea
+	resize: none
+
+#wpadminbar
+	top: auto
+	bottom: 0
+	position: fixed
+
+.wrapper
+	display: flex
+	flex-direction: column
+	width: 100%
+	justify-content: space-between
+
+main
+	position: relative
+
+.home-main .hero
+	margin-bottom: 0
+
+.inner
+	display: flex
+	width: 100%
+	gap: 25px
+
+.content
+	width: calc( 100% - 325px )
+	padding-bottom: 50px
+
+.sidebar
+	width: 300px
+	padding-bottom: 40px
+
+.team-vidget
+	position: sticky
+	top: 60px
+
+.container
+	max-width: 1300px
+	width: 100%
+	@include interpolate((padding-left, padding-right), 400px, 1200px, 10px, 15px)
+	margin: 0 auto
+
+.container .container
+	padding: 0
+
+.section
+	@include fluidMarginTB(30px, 40px, 480px, 1024px, 40px)
+	clear: both
+
+.section-accordion
+	@include fluidMarginTB(30px, 40px, 480px, 1024px, 40px)
+	clear: both
+
+.title
+	color: $titlecolor
+	@include fluidMarginB(20px, 25px, 480px, 1024px, 25px)
+
+.alignright
+	float: right
+	margin-left: 20px
+	margin-bottom: 20px
+	max-width: 50%
+	height: 100%
+
+.alignleft
+	float: left
+	margin-right: 20px
+	margin-bottom: 20px
+	max-width: 50%
+	height: 100%
+
+.attachment-post-thumbnail
+	@include fluidMaxHeight(300px, 600px, 480px, 1200px, 500px)
+	object-fit: cover
+	margin-bottom: 40px
+
+.response-img
+	max-width: 60%
+	object-fit: contain
+
+.author-inner
+	margin-top: 150px
+	margin-bottom: 50px
+
+.btn
+	height: 48px
+	width: fit-content
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0 25px
+	background-color: $red
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none !important
+	font-weight: 700
+	transition: opacity .3s ease-out
+	cursor: pointer
+	&:hover
+		opacity: .7
+
+ul.custom-list
+	color: $titlecolor
+
+.after-form h2,
+.after-reviews h2,
+.after-form h3,
+.after-reviews h3,
+.after-form h4,
+.after-reviews h4
+	text-align: center
+
+@media (max-width: 1220px)
+	.inner
+		display: block
+	.content,
+	.sidebar
+		width: 100%
+
+@media (max-width: 880px)
+	.alignright,
+	.alignleft
+		max-width: 200px
+		height: 100%
+
+@media (max-width: 720px)
+	.response-img
+		max-width: 100%
+		width: 100%
+		float: none
+		margin-left: 0
+		margin-right: 0
+
+@media (max-width: 620px)
+
+	.sidebar
+		max-width: 320px
+		margin: 0 auto
+
+@media (max-width: 440px)
+	.alignright,
+	.alignleft
+		max-width: 100%

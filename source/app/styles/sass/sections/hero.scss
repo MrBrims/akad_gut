@@ -1,0 +1,211 @@
+.hero {
+	@include fluidPaddingB(40px, 100px, 480px, 1024px, 40px);
+	@include fluidPaddingT(100px, 150px, 600px, 1024px, 60px);
+	background-color: #f3f8ff;
+	position: relative;
+	overflow-x: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		background-image: url(../images/hero_decor/hero-line.svg);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: cover;
+		z-index: 1;
+	}
+
+
+	&__items {
+		display: flex;
+		@include fluidGap(20px, 40px, 1020px, 1300px, 20px);
+	}
+
+	&__item {
+		width: 50%;
+	}
+
+	&__item:last-child {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -90px;
+			bottom: 0;
+			width: 170px;
+			height: 172px;
+			background-image: url(../images/hero_decor/points.svg);
+			background-repeat: no-repeat;
+			background-position: top right;
+			z-index: 1;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: -90px;
+			top: -190px;
+			width: 170px;
+			height: 172px;
+			background-image: url(../images/hero_decor/points.svg);
+			background-repeat: no-repeat;
+			background-position: top right;
+			z-index: 1;
+		}
+	}
+
+	&__title {
+		color: #002E5D;
+		margin-bottom: 30px;
+		max-width: 615px;
+		min-height: 180px;
+
+		span {
+			color: $accent;
+		}
+	}
+
+	&__text {
+		color: #002E5D;
+		@include fluidMarginB(25px, 30px, 480px, 1280px, 26px);
+
+		p {
+			margin-bottom: 15px;
+			max-width: 520px;
+		}
+	}
+
+	&__btn {
+		@include fluidMarginB(30px, 60px, 480px, 1280px, 26px);
+	}
+
+	&__form-box {
+		z-index: 50;
+		position: relative;
+		max-width: 430px;
+		min-height: 520px;
+		width: 100%;
+		padding: 30px 25px;
+		margin-left: auto;
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.96);
+		box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	&__form-title {
+		color: #002E5D;
+		font-weight: 500;
+		text-align: center;
+		@include fluidFontSize(18px, 24px, 480px, 1280px, 26px);
+		@include fluidLineHeight(25px, 28px, 480px, 1280px, 46px);
+		@include fluidMarginB(10px, 20px, 480px, 1024px, 40px);
+	}
+
+	&__decore-img {
+		position: absolute;
+		z-index: 2;
+		left: -20px;
+		top: 0;
+		height: 520px;
+	}
+
+	&__guarant {
+		margin-top: 30px;
+	}
+
+	&__breadcrumb {
+		// margin-top: 30px;
+	}
+}
+
+@media (max-width: 1220px) {
+	.hero {
+		&__decore-img {
+			display: none;
+		}
+
+		&__item:last-child::before {
+			left: 25px;
+		}
+	}
+}
+
+@media (max-width: 1030px) {
+	.hero {
+		&__title {
+			max-width: 100%;
+			z-index: 50;
+			position: relative;
+			min-height: auto;
+		}
+
+		&__item:first-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__item:last-child::after {
+			top: 30px;
+		}
+
+		&__item:last-child {
+			width: 80%;
+		}
+
+		&__form-box {
+			max-width: 100%;
+		}
+
+	}
+}
+
+@media (max-width: 800px) {
+	.hero {
+		&__items {
+			flex-direction: column;
+			@include fluidGap(30px, 50px, 480px, 1024px, 40px);
+		}
+
+		&__item {
+			width: 100%;
+		}
+
+		&__item:last-child {
+			width: 100%;
+		}
+
+		&__form-box {
+			min-height: auto;
+		}
+
+		&__text p {
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.hero {
+		&__inner {
+			--elements: 2;
+		}
+
+		&__form-box {
+			padding: 20px 10px;
+		}
+	}
+}
+
+@media (max-width: 340px) {
+	.hero {
+		&__inner {
+			--elements: 1;
+		}
+	}
+}

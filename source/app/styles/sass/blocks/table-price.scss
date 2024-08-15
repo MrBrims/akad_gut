@@ -1,0 +1,88 @@
+.table-price {
+    border-collapse: collapse;
+    width: 100%;
+    color: $titlecolor;
+    font-size: 12px;
+
+    th {
+        padding: 15px;
+        color: $titlefont;
+        font-size: 12px;
+        line-height: 20px;
+        background-color: #F3F8FF;
+        border: 1px solid #BBD1DC;
+        text-align: left;
+        font-weight: 400;
+    }
+
+    &__null {
+        border: none;
+    }
+
+    &__title {
+        background-color: #F3F8FF;
+        color: $titlecolor;
+        font-family: $titlefont;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 15px;
+        border: 1px solid #BBD1DC;
+    }
+
+    &__num,
+    &__name {
+        padding: 15px;
+    }
+
+    &__num,
+    &__name,
+    &__td-btn {
+        border: 1px solid #BBD1DC;
+        background: #FFF;
+    }
+
+    &__num {
+        text-align: center;
+    }
+
+    &__name {
+        color: #002E5D;
+        font-family: $titlefont;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__accent {
+        color: $red;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        color: $red;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 16px 32px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+
+    &__td-btn {
+        max-width: 135px;
+    }
+
+    ul {
+        list-style-type: none !important;
+    }
+}

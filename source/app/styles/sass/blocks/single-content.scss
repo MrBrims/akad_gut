@@ -1,0 +1,36 @@
+.single-content {
+	table {
+		border-collapse: collapse;
+		color: #002e5d;
+		font-size: 12px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	td {
+		background: #fff;
+		border: 1px solid #bbd1dc;
+		font-size: 14px;
+		line-height: 20px;
+		padding: 16px;
+	}
+
+	img {
+		width: auto;
+		height: auto;
+	}
+
+	.single-popup {
+		margin: 20px 0;
+		display: inline-flex;
+	}
+
+}
+
+@media (max-width:420px) {
+	.single-content {
+		td {
+			padding: 5px;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+.form-sidebar {
+    padding: 20px 12px;
+    background: #FFF;
+    box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    max-height: 88vh;
+    overflow-y: auto;
+
+    &__title {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 1.2;
+        font-weight: 600;
+        font-family: $titlefont;
+
+        span {
+            color: $red;
+        }
+    }
+
+    .form__items {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .date-input,
+    .date-input::placeholder {
+        font-size: 13px;
+    }
+
+    &__guarant,
+    &__check {
+        color: $textcolor;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 28px;
+
+        &::before {
+            @include bgbefore;
+            width: 20px;
+            height: 20px;
+            left: 0;
+        }
+    }
+
+    &__guarant::before {
+        background-image: url(../images/icons/form-sidebar-guarant.svg);
+    }
+
+    &__check::before {
+        background-image: url(../images/icons/form-sidebar-check.svg);
+    }
+
+    &__btn {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+    }
+}

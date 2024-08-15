@@ -1,0 +1,59 @@
+.error-404
+	padding-top: 80px
+
+	&::after
+		content: ""
+		position: absolute
+		background-image: url(../images/404-bg.svg)
+		background-position: left center
+		background-repeat: no-repeat
+		background-size: cover
+		inset: 0
+		background-color: #f3f8ff
+		z-index: -1
+
+	&__inner
+		display: flex
+		align-items: center
+		gap: 40px
+
+	&__content,
+	&__img-box
+		width: 50%
+
+	&__list-text
+		margin-bottom: 10px
+
+	&__list
+		color: $titlecolor
+		margin-bottom: 20px
+
+	&__list-item
+		margin-bottom: 7px
+		list-style-type: disc
+		margin-left: 20px
+
+	&__accent-text
+		@include fluidFontSize(18px, 24px, 480px, 1280px, 26px)
+		line-height: 24px
+		color: $titlecolor
+		margin-bottom: 10px
+		font-family: $titlefont
+		font-weight: 400
+
+		a
+			color: $accent
+			text-decoration: underline
+			@include hover
+
+	&__btn
+		margin-top: 30px
+		margin-inline: auto
+
+@media (max-width:720px)
+	.error-404
+		&__img-box
+			display: none
+
+		&__content
+			width: 100%

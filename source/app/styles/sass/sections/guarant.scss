@@ -1,0 +1,71 @@
+.guarant {
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+
+    &__item {
+        border-radius: 8px;
+        border: 1px solid #BBD1DC;
+        @include fluidPadding(10px, 25px, 480px, 1024px, 25px);
+        position: relative;
+        @include fluidMarginB(20px, 25px, 480px, 1024px, 25px);
+    }
+
+    &__item-title {
+        color: #F70431;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include fluidFontSize(18px, 24px, 480px, 1280px, 24px);
+        @include fluidLineHeight(28px, 32px, 480px, 1280px, 32px);
+        padding-right: 170px;
+        margin-bottom: 15px;
+    }
+
+    &__item-subtitle {
+        color: $titlecolor;
+        font-family: $titlefont;
+        font-weight: 500;
+        text-transform: uppercase;
+        @include fluidFontSize(16px, 20px, 480px, 1280px, 20px);
+        @include fluidLineHeight(22px, 24px, 480px, 1280px, 24px);
+        padding-right: 170px;
+    }
+
+    &__item-text {
+        margin-top: 8px;
+        padding-right: 170px;
+    }
+
+    &__item-img {
+        position: absolute;
+        @include fluidRight(10px, 25px, 480px, 1024px, 25px);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 580px) {
+    .guarant {
+        &__item-img {
+            max-width: 100px;
+        }
+        &__item-title,
+        &__item-subtitle,
+        &__item-text {
+            padding-right: 110px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .guarant {
+        &__item-img {
+            display: none;
+        }
+        &__item-title,
+        &__item-subtitle,
+        &__item-text {
+            padding-right: 0;
+        }
+    }
+}

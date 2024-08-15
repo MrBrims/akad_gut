@@ -1,0 +1,28 @@
+.price-lektorat {
+    &__items {
+        display: flex;
+        @include interpolate(gap, 600px, 1200px, 15px, 40px);
+    }
+
+    &__item:first-child {
+        width: 100%;
+    }
+
+    &__item:last-child {
+        width: 100%;
+        max-width: 335px;
+    }
+}
+
+@media (max-width:900px) {
+    .price-lektorat {
+        &__wrapper {
+            overflow-x: auto;
+            padding: 0 5px;
+        }
+
+        &__items {
+            min-width: 900px;
+        }
+    }
+}

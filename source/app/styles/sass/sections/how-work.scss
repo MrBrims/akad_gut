@@ -1,0 +1,16 @@
+.how-work {
+
+    &__inner {
+        @include fluidMarginT(40px, 60px, 480px, 1024px, 60px);
+        @include fluidMarginB(40px, 60px, 480px, 1024px, 60px);
+    }
+
+    &__content p {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}

@@ -1,0 +1,10 @@
+.hero-single {
+	color: $titlecolor;
+	position: relative;
+	z-index: 10;
+
+	h1 {
+		position: relative;
+		z-index: 2;
+	}
+}

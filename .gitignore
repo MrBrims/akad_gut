@@ -1,0 +1,13 @@
+# Ignore them file
+**/node_modules
+Thumbs.db
+*.DS_Store
+source/package-lock.json
+debug.log
+**/src/Feedback**.php
+**/src/PrivateConstants.php
+wp-content/themes/**
+wp-content/plugins/**
+wp-content/cache/**
+wp-content/wp-rocket-config/**
+!**/src/Feedback.php

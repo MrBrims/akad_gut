@@ -1,0 +1,77 @@
+.edulab {
+    &__title {
+        font-size: 24px;
+        color: $titlecolor;
+        margin-bottom: 15px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__col {
+        border-radius: 8px;
+        border: 1px solid #E5E5E5;
+        background: #FFF;
+        width: 50%;
+        height: fit-content;
+    }
+
+    &__item {
+        border-bottom: 1px solid #E5E5E5;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        font-size: 16px;
+
+        &:last-child {
+            border: none;
+        }
+
+        span {
+            max-width: 255px;
+            height: fit-content;
+        }
+
+        span:last-child,
+        a {
+            color: #102752;
+        }
+
+        a {
+            @include hover;
+        }
+
+        span:last-child {
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .edulab {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__col {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .edulab {
+        &__item {
+            padding: 15px;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+                max-width: 100%;
+            }
+        }
+    }
+}

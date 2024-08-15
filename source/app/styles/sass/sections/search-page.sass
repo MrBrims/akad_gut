@@ -1,0 +1,108 @@
+.search-page
+	padding: 120px 0
+
+	&__head
+		border-bottom: 1px solid #E5E5E5
+		margin-bottom: 16px
+
+	&__title
+		text-align: center
+
+	&__head-result
+		text-align: center
+		color: $textcolor
+		margin-bottom: 30px
+
+	&__result-title
+		font-size: 24px
+		margin-bottom: 10px
+
+		a
+			color: $titlecolor
+			@include hover
+
+	&__excerpt
+		padding-bottom: 15px
+		margin-bottom: 25px
+		border-bottom: 1px solid #E5E5E5
+		color: $textcolor
+
+	&__null
+		display: flex
+		padding-top: 30px
+		justify-content: center
+		align-items: center
+		gap: 130px
+
+	&__null-item:first-child
+		flex-shrink: 0
+
+	&__null-title
+		color: $titlecolor
+		font-size: 45px
+		font-weight: 700
+
+.search-form-page
+	display: block
+	position: relative
+	max-width: 640px
+	margin-inline: auto
+	margin-bottom: 15px
+
+	input
+		height: 40px
+
+	label
+		height: 40px
+		width: 40px
+
+.pagination
+	max-width: fit-content
+	justify-content: center
+	flex-wrap: wrap
+	margin: 0 auto
+	display: flex
+	gap: 4px
+
+.search-nan
+	background-color: #f3f8ff
+	background-image: url(../images/search-bg.svg)
+	background-repeat: no-repeat
+	background-position: right
+
+.page-numbers
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 32px
+	height: 32px
+	border-radius: 2px
+	border: 1px solid #E5E5E5
+	color: $textcolor
+	@include hover
+
+	&.current
+		background-color: #F3F8FF
+		color: $red
+
+	&.next,
+	&.prev
+		display: none
+
+@media (max-width:1100px)
+	.search-page
+		&__null
+			gap: 30px
+
+@media (max-width:920px)
+	.search-page
+		&__null
+			flex-direction: column
+
+		&__null-title
+			text-align: center
+			font-size: 30px
+
+@media (max-width:780px)
+	.search-page
+		padding: 110px 0

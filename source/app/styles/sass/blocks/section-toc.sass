@@ -1,0 +1,42 @@
+.section-toc
+	padding: 20px
+	background-color: #F3F8FF
+	margin-bottom: clamp(3.125rem, 3.125vw + 2.5rem, 6.25rem)
+
+	&__title
+		text-transform: uppercase
+		font-weight: 700
+		color: #002E5D
+		position: relative
+		padding-left: 23px
+		font-size: 16px
+		margin-bottom: 12px
+
+		&::before
+			content: ""
+			position: absolute
+			width: 15px
+			height: 15px
+			background-image: url(../images/icons/menu-toc.svg)
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			left: 0
+			top: 3px
+
+	ol
+		padding-left: 17px
+
+		li
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+		a
+			transition: color .3s ease-in
+			color: #002E5D
+
+			&:hover
+				text-decoration: underline
+				color: #325D9C

@@ -1,0 +1,25 @@
+.faq-form {
+    &__inner {
+        background-image: url(../images/faq-bg.svg);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 450px;
+    }
+
+    &__box {
+        max-width: 860px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.15);
+        padding: 40px 100px;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:860px) {
+    .faq-form {
+        &__box {
+            padding: 25px 15px;
+        }
+    }
+}

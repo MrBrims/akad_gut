@@ -1,0 +1,91 @@
+// USER VARIABLES SECTION
+
+$accent: #325D9C // Accent Color
+$textcolor: #000 // Text Color
+$red: #F70431 // Red Color
+$titlecolor: #002E5D // Title Color
+$userfont: OpenSans, sans-serif // User Font Family
+$titlefont: Barlow, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$layout: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)))
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/swiper/swiper-bundle' // Style Swiper
+@import 'node_modules/@fancyapps/ui/dist/fancybox' // Style Fancybox
+@import 'node_modules/intl-tel-input/build/css/intlTelInput' // Style in tel input
+@import 'node_modules/vanillajs-datepicker/sass/datepicker' // Style Datepicker
+@import 'node_modules/nice-select2/dist/css/nice-select2' // Style Nice Select
+@import 'node_modules/tippy.js/dist/tippy' // Style Tippy.js
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
+
+@include font('Barlow', normal, 500, '../fonts/BarlowSemiCondensed-Medium.woff2')
+@include font('Barlow', normal, 600, '../fonts/BarlowSemiCondensed-SemiBold.woff2')
+@include font('Barlow', normal, 700, '../fonts/BarlowSemiCondensed-Bold.woff2')
+
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2')
+@include font('OpenSans', normal, 500, '../fonts/OpenSans-Medium.woff2')
+@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2')
+@include font('OpenSans', normal, 700, '../fonts/OpenSans-Bold.woff2')
+
+// HOVER
+
+@mixin hover
+  transition: opacity .3s ease-in-out
+  &:hover
+    opacity: .7
+
+// BACKGROUND BEFORE ELEMENT
+
+@mixin bgbefore
+  content: ""
+  position: absolute
+  background-repeat: no-repeat
+  background-position: center center
+  top: 50%
+  transform: translateY(-50%)
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+input, textarea
+  outline: none
+  &:focus:required:invalid
+    border-color: red
+  &:required:valid
+    border-color: green
+
+body
+  font-family: $userfont
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.4
+  color: $textcolor
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  overflow-x: hidden

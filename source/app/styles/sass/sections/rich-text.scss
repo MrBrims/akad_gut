@@ -1,0 +1,91 @@
+.rich-text {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    h2 {
+        color: $titlecolor;
+        @include fluidMarginT(25px, 30px, 480px, 1024px, 80px);
+        @include fluidMarginB(20px, 25px, 480px, 1024px, 25px);
+    }
+
+    h3,
+    h4 {
+        color: $titlecolor;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style-type: disc;
+        margin-bottom: 15px;
+    }
+
+    ol {
+        padding-left: 20px;
+        margin-bottom: 15px;
+        list-style-type: none;
+        counter-reset: heroNum;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 13px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 0;
+                left: 0;
+                background-image: url(../images/icons/list-decore.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px;
+            }
+
+            &::after {
+                counter-increment: heroNum;
+                content: counter(heroNum);
+                position: absolute;
+                top: 1px;
+                left: -1px;
+                width: 20px;
+                height: 20px;
+                text-align: right;
+                color: #FFF;
+                font-size: 17px;
+                font-family: $titlefont;
+                font-weight: 700;
+                line-height: 17px;
+            }
+        }
+    }
+
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .faq__inner-title,
+    .page-author__name,
+    .main-faq__inner-title {
+        margin: 0;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+        word-break: break-word;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

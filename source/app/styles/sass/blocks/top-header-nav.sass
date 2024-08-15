@@ -1,0 +1,14 @@
+.top-header-nav
+
+	&__list
+		display: flex
+		gap: 10px
+
+		a
+			text-transform: uppercase
+			color: $titlecolor
+			@include hover
+
+@media (max-width: 420px)
+	.top-header-nav
+		display: none

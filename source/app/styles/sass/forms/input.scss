@@ -1,0 +1,30 @@
+input {
+  display: block;
+  width: 100%;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.input {
+  border-radius: 2px;
+  border: 1px solid #BBD1DC;
+  background: #FBFCFF;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 21px;
+  height: 40px;
+
+  &::placeholder {
+    color: #BBD1DC;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &.phone-input {
+    padding-right: 33px;
+  }
+}

@@ -1,0 +1,59 @@
+.meta-single {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-wrap: wrap;
+
+    &__item a {
+        color: $titlecolor;
+        text-decoration: none !important;
+    }
+
+    &__cat {
+        border-radius: 2px;
+        background: #F3F8FF;
+        padding: 2px 8px;
+    }
+
+    &__date {
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/date-icon.svg);
+        }
+    }
+
+    &__modif {
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/modif-icon.svg);
+        }
+    }
+
+    &__author {
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            @include bgbefore;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/aut-icon.svg);
+        }
+    }
+}

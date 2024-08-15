@@ -1,0 +1,27 @@
+.blitz {
+	background-color: #f3f8ff;
+	padding: 40px 0;
+
+	.container {
+		max-width: 760px;
+		color: #002e5d;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&__sub {
+		font-size: 14px;
+		text-align: center;
+		color: $textcolor;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 12px;
+		text-align: center;
+		color: #102752;
+	}
+}

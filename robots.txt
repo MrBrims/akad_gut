@@ -1,0 +1,31 @@
+User-agent: *
+Disallow: /wp-includes/
+Disallow: /wp-admin/
+Disallow: /*?
+Disallow: */feed           
+Disallow: */rss           
+Disallow: */embed
+Disallow: *utm*=             
+Disallow: *openstat=
+    
+Allow: /*.js
+Allow: /*.css
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.pdf
+Allow: /*.webp
+Allow: /wp-includes/*.css
+Allow: /wp-includes/*.js
+Allow: /wp-*.webp
+Allow: /wp-*.svg
+Allow: /wp-admin/admin-ajax.php
+Disallow: /sites/
+
+Sitemap: https://akademily.de/sitemap_index.xml
+Sitemap: https://akademily.de/post-sitemap.xml
+Sitemap: https://akademily.de/page-sitemap.xml
+Sitemap: https://akademily.de/category-sitemap.xml

@@ -1,0 +1,105 @@
+.price-boni {
+
+	&__wrapper {
+		margin-bottom: 15px;
+	}
+
+	&__name {
+
+		span {
+			position: relative;
+			padding-left: 18px;
+			display: block;
+
+			&::before {
+				@include bgbefore;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				background-image: url(../images/icons/check-price-list.svg);
+			}
+		}
+
+	}
+
+	&__accent {
+		color: $red;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 24px;
+		text-transform: uppercase;
+		border: 1px solid #BBD1DC;
+		padding: 15px;
+	}
+
+	&__price {
+		font-size: 12px;
+		border: 1px solid #BBD1DC;
+		padding: 15px;
+
+		span {
+			color: $accent;
+			font-size: 16px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	&__items {
+		max-width: fit-content;
+		display: flex;
+		gap: 60px;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+	}
+
+	&__item:last-child {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+
+		p {
+			color: $red;
+			font-family: $titlefont;
+			font-size: 32px;
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 10px;
+
+		a {
+			color: $accent;
+		}
+	}
+}
+
+@media (max-width:680px) {
+	.price-boni {
+		&__wrapper {
+			overflow-x: auto;
+		}
+
+		&__table {
+			min-width: 680px;
+		}
+	}
+}
+
+@media (max-width:620px) {
+	.price-boni {
+		&__items {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+}

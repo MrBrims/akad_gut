@@ -1,0 +1,247 @@
+.team {
+	&__items {
+		--gap: 25px;
+		--elements: 3;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap);
+	}
+
+	&__item {
+		border-radius: 2px;
+		border: 1px solid #bbd1dc;
+		background: #fff;
+		width: $layout;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&.alt {
+
+			.team__photo-box,
+			.team__photo {
+				max-height: 180px;
+				width: 180px;
+			}
+
+			.team__time {
+				margin: unset;
+			}
+		}
+	}
+
+	&__item-top {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 16px;
+	}
+
+	&__item-inner {
+		display: flex;
+		gap: 12px;
+	}
+
+	&__photo-box {
+		max-height: 250px;
+		width: 180px;
+		flex-shrink: 0;
+	}
+
+	&__photo {
+		max-height: 250px;
+		min-height: 180px;
+		width: 180px;
+		object-fit: cover;
+		border-radius: 4px;
+		background-color: $accent;
+	}
+
+	&__item-name {
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+		color: $titlecolor;
+	}
+
+	&__item-position {
+		margin-bottom: 15px;
+		color: $textcolor;
+		font-size: 16px;
+		display: block;
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__box {
+		display: flex;
+		gap: 4px;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+
+	&__year-text,
+	&__order-text,
+	&__client-text {
+		position: relative;
+		padding-left: 20px;
+		color: #325d9c;
+		font-size: 12px;
+
+		&::before {
+			@include bgbefore;
+			left: 0;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__year-num,
+	&__order-num,
+	&__client-num,
+	&__rating-num {
+		color: $titlecolor;
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&__year-text::before {
+		background-image: url(../images/icons/team-year-icon.svg);
+	}
+
+	&__order-text::before {
+		background-image: url(../images/icons/team-year-order.svg);
+	}
+
+	&__client-text::before {
+		background-image: url(../images/icons/team-year-client.svg);
+	}
+
+	&__rating svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__rating-box {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__rating-all {
+		color: #325d9c;
+		font-size: 14px;
+	}
+
+	&__descr {
+		overflow: hidden;
+		color: $textcolor;
+		text-overflow: ellipsis;
+		font-size: 16px;
+		font-style: italic;
+		line-height: 20px;
+		margin-bottom: 15px;
+		margin-top: 25px;
+	}
+
+	&__time {
+		color: #325d9c;
+		font-size: 14px;
+		text-align: center;
+		position: relative;
+		max-width: fit-content;
+		margin: 0 auto;
+		padding-left: 25px;
+		position: relative;
+
+		&::before {
+			@include bgbefore;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			background-image: url(../images/icons/team-year-time.svg);
+		}
+	}
+
+	&__item-bottom {
+		display: flex;
+		gap: 24px;
+		justify-content: center;
+		padding-bottom: 16px;
+	}
+
+	&__main-whatsapp,
+	&__main-phone,
+	&__main-email {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		@include hover;
+		// padding-left: 30px;
+		color: #fff;
+		font-size: 14px;
+		position: relative;
+		background: #f3f8ff;
+		border: 1px solid #e5e5e5;
+		border-radius: 8px;
+
+		&::before {
+			@include bgbefore;
+			width: 100%;
+			height: 100%;
+			background-size: 50%;
+		}
+	}
+
+	&__main-whatsapp {
+		&::before {
+			background-image: url(../images/icons/whatsapp.svg);
+		}
+	}
+
+	&__main-phone {
+		&::before {
+			background-image: url(../images/icons/phone-menu.svg);
+		}
+	}
+
+	&__main-email {
+		&::before {
+			background-image: url(../images/icons/email-menu.svg);
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.team {
+		&__items {
+			--elements: 2;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.team {
+		&__items {
+			--elements: 1;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.team {
+		&__item-inner {
+			flex-direction: column;
+		}
+	}
+}

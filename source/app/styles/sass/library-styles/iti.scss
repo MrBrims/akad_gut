@@ -1,0 +1,40 @@
+.iti {
+  width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: #FBFCFF;
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+	background-color: #f3f8ff;
+}
+
+.iti__selected-dial-code {
+  font-size: 14px;
+}
+
+.iti__country-list {
+  right: -110px;
+  top: 45px;
+  border-radius: 2px;
+  border: 1px solid #BBD1DC;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.iti__country.iti__highlight {
+	background-color: #f3f8ff;
+}
+
+
+.iti__flag {
+  background-image: url("../images/flags/flags.webp");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../images/flags/flags@2x.webp");
+  }
+}

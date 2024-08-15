@@ -1,0 +1,37 @@
+.price-coach {
+    @include interpolate((padding-top, padding-bottom), 400px, 1200px, 40px, 80px);
+    background-color: #FBFCFF;
+
+    &__items {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__item {
+        width: 50%;
+    }
+}
+
+@media (max-width:1100px) {
+    .price-coach {
+        &__items {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .price-coach {
+        &__wrapper {
+            overflow-x: auto;
+        }
+
+        &__table {
+            min-width: 600px;
+        }
+    }
+}

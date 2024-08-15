@@ -1,0 +1,28 @@
+.centr_banner
+	margin-bottom: 30px
+
+.centr_banner .col-xxl-6:nth-child(2) img
+	max-height: 350px
+	margin-left: auto
+	margin-right: auto
+
+.centr_banner .btn-primary
+	margin-left: auto
+	max-width: fit-content
+	text-align: center
+
+@media (max-width:590px)
+	.centr_banner
+		flex-direction: column
+
+	.centr_banner .col-xxl-6:nth-child(2)
+		order: -1
+
+	.centr_banner .col-xxl-6:nth-child(1)
+		text-align: left !important
+
+	.centr_banner .btn-primary
+		margin-right: auto
+
+	.centr_banner h4 span
+		text-align: left !important

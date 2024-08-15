@@ -1,0 +1,43 @@
+.bakalavr {
+
+	&__list {
+		column-count: 3;
+		gap: 50px;
+	}
+
+	li {
+		margin-bottom: 10px;
+		color: $titlecolor;
+	}
+
+	a {
+		border-bottom: 1px solid $titlecolor;
+		color: $accent;
+		@include hover;
+	}
+
+}
+
+@media (max-width:880px) {
+	.bakalavr {
+		&__list {
+			gap: 20px;
+		}
+	}
+}
+
+@media (max-width:880px) {
+	.bakalavr {
+		&__list {
+			column-count: 2;
+		}
+	}
+}
+
+@media (max-width:540px) {
+	.bakalavr {
+		&__list {
+			column-count: 1;
+		}
+	}
+}

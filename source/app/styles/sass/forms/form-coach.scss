@@ -1,0 +1,56 @@
+.form-coach {
+	&__guarant-title {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		text-align: center;
+		margin: 15px 0;
+		color: #325D9C;
+		text-transform: uppercase;
+	}
+
+	&__guarant-items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
+		margin-bottom: 25px;
+		font-size: 13px;
+		color: #325D9C;
+		font-weight: 500;
+	}
+
+	&__guarant-item span {
+		text-decoration: underline;
+	}
+
+	&__guarant-pay {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4px;
+
+		div {
+			max-width: 45px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.046);
+			border-radius: 4px;
+			padding: 4px;
+		}
+
+		img {
+			height: auto;
+			// max-width: 35px;
+		}
+	}
+}
+
+@media (max-width:440px) {
+	.form-coach {
+		&__guarant-items {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

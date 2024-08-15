@@ -1,0 +1,14 @@
+.datepicker-picker button {
+  background-color: $accent;
+  color: #fff;
+  border: none;
+}
+
+.date-input {
+  cursor: pointer;
+  user-select: none;
+}
+
+/** HTML code
+  <input class="date-input" placeholder="date" autocomplete="off" name="deadline" type="text" />
+*/

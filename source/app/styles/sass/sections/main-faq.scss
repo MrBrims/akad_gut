@@ -1,0 +1,127 @@
+.main-faq {
+    padding-top: 25px;
+
+    &__tab {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__nav-inner {
+        max-width: 420px;
+        width: 100%;
+        position: sticky;
+        top: 90px;
+        flex-direction: column;
+        height: fit-content;
+        border: 1px solid #325D9C;
+        background-color: #F3F8FF;
+        color: $titlecolor;
+        @include interpolate(font-size, 320px, 1200px, 18px, 24px);
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    &__nav {
+        padding: 16px 24px;
+        border-bottom: 1px solid #325D9C;
+        width: 100%;
+        transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+        &:last-child {
+            border: none;
+        }
+
+        &:hover,
+        &.--active-tab {
+            background-color: #325D9C;
+            color: #fff;
+        }
+    }
+
+    &__nav.tab__nav {
+        text-align: left;
+        justify-content: start;
+    }
+
+    &__content-inner {
+        width: 100%;
+    }
+
+    &__tab-title {
+        color: $titlecolor;
+        margin-bottom: 30px;
+        color: #002E5D;
+        font-size: 40px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__head {
+        padding: 18px 15px 18px 50px;
+        position: relative;
+        cursor: pointer;
+        border-top: 1px solid #BBD1DC;
+    }
+
+    &__inner-icon {
+        position: absolute;
+        left: 15px;
+        top: 22px;
+        transition: transform .3s ease-in-out;
+    }
+
+    &__inner-title {
+        color: $titlecolor;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows .3s ease-in-out;
+        overflow: hidden;
+
+        p,
+        ul,
+        h2,
+        h3,
+        h4 {
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 15px;
+        }
+    }
+
+    &__item.--active .main-faq__content {
+        grid-template-rows: 1fr;
+    }
+
+    &__item.--active .main-faq__inner-icon {
+        transform: rotate(45deg);
+    }
+
+    &__item.--active .main-faq__head {
+        border-bottom: 1px solid #BBD1DC;
+    }
+}
+
+@media (max-width:780px) {
+    .main-faq {
+        &__tab {
+            flex-direction: column;
+        }
+
+        &__nav-inner {
+            max-width: 100%;
+            position: static;
+        }
+
+    }
+}

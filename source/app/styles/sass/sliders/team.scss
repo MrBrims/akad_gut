@@ -1,0 +1,148 @@
+.team {
+	position: relative;
+	user-select: none;
+
+
+	&__title {
+		color: #002E5D;
+		text-align: center;
+		font-size: 20px;
+		font-family: $titlefont;
+		font-weight: 700;
+		line-height: 32px;
+		text-transform: uppercase;
+		@include fluidMarginB(20px, 25px, 480px, 1024px, 25px);
+	}
+
+	&__body {
+		height: fit-content;
+		box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	&__slide-inner {
+		padding: 8px;
+		background-color: #fff;
+		height: fit-content;
+	}
+
+	&__wrapper,
+	&__slide {
+		height: fit-content;
+	}
+
+	&__img {
+		margin-bottom: 15px;
+		width: 100%;
+		max-height: 310px;
+		object-fit: cover;
+	}
+
+	&__name,
+	&__position {
+		text-align: center;
+	}
+
+	&__name {
+		color: $accent;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 28px;
+		margin-bottom: 3px;
+	}
+
+	&__position {
+		margin-bottom: 15px;
+	}
+
+	&__whatsapp,
+	&__mail,
+	&__times {
+		display: block;
+		position: relative;
+		margin-bottom: 8px;
+		color: $accent;
+		@include hover;
+		padding-left: 30px;
+
+		&::before {
+			@include bgbefore;
+			width: 16px;
+			height: 16px;
+			left: 6px;
+		}
+	}
+
+	&__whatsapp::before {
+		background-image: url(../images/icons/whatsapp.svg);
+	}
+
+	&__mail::before {
+		background-image: url(../images/icons/email-green.svg);
+	}
+
+	&__times::before {
+		background-image: url(../images/icons/time_team.svg);
+	}
+
+	&__btn {
+		margin: 30px auto 20px auto;
+	}
+
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		width: fit-content;
+		margin: 15px auto 0 auto;
+	}
+
+	.swiper-pagination-bullet {
+		opacity: 1;
+		background-color: #BBD1DC;
+		width: 8px;
+		height: 8px;
+		transition: background-color .3s ease-in-out;
+
+		&.swiper-pagination-bullet-active {
+			background-color: $accent;
+		}
+	}
+
+}
+
+@media (max-width: 1220px) {
+	.team {
+		&__body {
+			box-shadow: none;
+		}
+
+		&__slide-inner {
+			display: flex;
+			align-items: center;
+			gap: 70px;
+			max-width: 600px;
+			margin: 0 auto;
+			border: 1px solid $accent;
+		}
+
+		&__img {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 620px) {
+	.team {
+		&__body {
+			box-shadow: 3px 6px 20px 0px rgba(0, 0, 0, 0.15);
+		}
+
+		&__slide-inner {
+			display: block;
+			max-width: 100%;
+			border: none;
+		}
+
+		&__img {
+			margin-bottom: 15px;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.form-middle {
+    &__title {
+        text-align: center;
+    }
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 25px;
+        color: $textcolor;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,44 @@
+.soc-rev {
+	margin-bottom: 15px;
+	user-select: none;
+
+	&__wrapper,
+	&__slide {
+		height: fit-content;
+	}
+
+	&__slide-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #bbd1dc;
+		border-radius: 5px;
+		padding: 10px;
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
+
+	&__slide-img {
+		height: auto;
+		max-height: 300px;
+		object-fit: contain;
+	}
+
+	.swiper-pagination-bullet {
+		opacity: 1;
+		background-color: #BBD1DC;
+		width: 16px;
+		height: 16px;
+		transition: background-color .3s ease-in-out;
+
+		&.swiper-pagination-bullet-active {
+			background-color: $accent;
+		}
+	}
+
+	.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 10px;
+	}
+}

@@ -1,0 +1,138 @@
+.gift {
+	position: fixed;
+	max-width: 600px;
+	height: 380px;
+	width: 100%;
+	left: 25px;
+	bottom: 100px;
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: contain;
+	padding: 30px 20px;
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s ease-in-out;
+
+	&.--visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		object-fit: contain;
+		background: $accent;
+		border: none;
+		@include hover;
+		cursor: pointer;
+		display: block;
+		padding: 0;
+
+		svg {
+			width: 13px;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		inset: 25px 0 0 0;
+	}
+
+	&-users {
+		position: absolute;
+		top: 63%;
+		left: 17%;
+		font-size: 32px;
+		font-weight: 600;
+		color: #f70431;
+	}
+}
+
+.gift-mobile {
+	display: none;
+	position: fixed;
+	left: 15px;
+	bottom: 85px;
+	z-index: 1000;
+
+	&:hover .gift-mobile__box {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__btn {
+		width: 80px;
+		height: auto;
+		object-fit: contain;
+		cursor: pointer;
+		filter: drop-shadow(0px 0px 10px crimson);
+		opacity: 0;
+		visibility: hidden;
+
+		&.rotate-scale-up {
+			animation: rotate-scale-up 0.65s linear both;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__box {
+		position: absolute;
+		top: -267px;
+		left: -5px;
+		width: 300px;
+		height: 300px;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: contain;
+		padding: 15px;
+		border-radius: 4px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s ease-in-out;
+	}
+
+	&__link {
+		position: absolute;
+		inset: 0;
+	}
+}
+
+.gift-users-mobile {
+	position: absolute;
+	bottom: 133px;
+	left: 51px;
+}
+
+@keyframes rotate-scale-up {
+	0% {
+		transform: scale(1) rotateZ(0);
+	}
+
+	50% {
+		transform: scale(1.5) rotateZ(180deg);
+	}
+
+	100% {
+		transform: scale(1) rotateZ(360deg);
+	}
+}
+
+
+@media (max-width: 600px) {
+	.gift {
+		display: none;
+	}
+
+	.gift-mobile {
+		display: block;
+	}
+}

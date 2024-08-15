@@ -1,0 +1,22 @@
+#toc_container {
+    padding: 24px;
+}
+
+#toc_container p.toc_title {
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+        @include bgbefore;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/icons/toc-icon.svg);
+    }
+}
+
+.toc_list {
+    line-height: 1.7;
+}
