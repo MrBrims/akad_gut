@@ -2,6 +2,11 @@
 
 class Helpers
 {
+	public function __construct ()
+	{
+		add_action('wp', [$this, 'geo']);
+	}
+	
 	public static function imageAlt ($image_url)
 	{
 		$image_id = attachment_url_to_postid($image_url);
@@ -24,11 +29,11 @@ class Helpers
 		$day = date('N');
 		$whatsArr = [
 			'1' => '49(1577)653-67-49',
-			'2' => '49(304)669-04-28',
-			'3' => '49(304)669-04-28',
-			'4' => '49(304)669-04-28',
-			'5' => '49(304)669-01-88',
-			'6' => '49(304)669-01-88',
+			'2' => '49(1577)653-67-49',
+			'3' => '49(1577)653-67-49',
+			'4' => '49(1577)653-67-49',
+			'5' => '49(1577)653-67-49',
+			'6' => '49(1577)653-67-49',
 			'7' => '49(1577)653-67-49',
 		];
 		return $whatsArr[$day];

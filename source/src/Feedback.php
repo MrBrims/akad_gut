@@ -118,11 +118,13 @@ class Feedback
 			);
 
 			// Prepare POST data
-			// $data = $_POST;
 			$data = array_merge($_POST, $this->postMeta);
 			if (!empty($_FILES['file']['tmp_name'])) {
-				$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
-				$data['file'] = $fileUpload;
+				$fileUpload = $_FILES['file'];
+				$file_extension = pathinfo($fileUpload['name'], PATHINFO_EXTENSION);
+				$current_date = date('ymdHi');
+				$new_filename = "file{$current_date}.{$file_extension}";
+				$data['file'] = new CURLFile($fileUpload['tmp_name'], $fileUpload['type'], $new_filename);
 			}
 
 			$ch = curl_init(CRM_URL);
@@ -272,6 +274,7 @@ class Feedback
 		$sbjToClient = 'Vielen Dank, dass Sie Akademily.de gewählt haben!';
 		$msgToClient = '<p><strong>Hallo,</strong></p>
 		<p><strong>Vielen Dank,</strong> dass Sie Akademily.de gewählt haben!</p>
+		<p>Dies ist eine automatisch generierte E-Mail. Bitte antworten Sie nicht darauf.</p>
 		<p>Wir haben Ihre Anfrage erhalten und sind derzeit auf der Suche nach einem passenden Autor. Ein persönlicher Berater wird Sie in Kürze auf dem von Ihnen angegebenen Weg kontaktieren.</p>
 		<p style="text-align: center;"><strong>Ihre Anfragenummer: ' . $id . '</strong></p>
 		<p style="text-align: center;"><strong>Wenn Sie keine E-Mail erhalten haben, überprüfen Sie bitte Ihren Spam- und Werbeordner und markieren Sie unsere E-Mail als „Kein Spam“.</strong></p>
@@ -298,6 +301,7 @@ class Feedback
 		<br>
 		<hr>
 		<p>Email: <a href="mailto:info@akademily.de">info@akademily.de</a></p>
+		<p>WhatsApp: <a href="https://wa.me/493046690286">493046690286</a></p>
 		<p>Festnetz: <a href="tel:+493046690110">+49(304)669-01-10</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen,<em></p>
 		<p style="text-align: center;"><em>Ihr Team von Akademily!<em></p>';
