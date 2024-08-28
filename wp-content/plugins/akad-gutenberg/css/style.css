@@ -1,0 +1,23 @@
+html :where(.wp-block) {
+	max-width: 1300px;
+}
+
+.editor-styles-wrapper .is-root-container {
+	margin-bottom: 100px;
+}
+
+.admin-image-box {
+	position: relative;
+}
+
+.admin-image-box.loading img {
+	opacity: 0.3;
+}
+
+.admin-image-box .components-spinner {
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

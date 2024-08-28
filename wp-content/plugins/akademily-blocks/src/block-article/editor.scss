@@ -1,0 +1,19 @@
+.wp-block-create-block-block-article {
+	border-radius: 8px;
+	padding: 8px;
+	border: 1px solid #5a89cf;
+	position: relative;
+
+	&::before {
+		content: "artice";
+		text-transform: uppercase;
+		font-size: 12px;
+		position: absolute;
+		top: -1px;
+		background-color: #5a89cf;
+		color: #fff;
+		left: 11px;
+		padding: 0 3px;
+		border-radius: 0 0 4px 4px;
+	}
+}

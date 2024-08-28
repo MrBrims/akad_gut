@@ -1,0 +1,23 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-section/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+.wp-block-create-block-block-section {
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #5a89cf;
+  position: relative;
+}
+.wp-block-create-block-block-section::before {
+  content: "section";
+  text-transform: uppercase;
+  font-size: 12px;
+  position: absolute;
+  top: -1px;
+  background-color: #5a89cf;
+  color: #fff;
+  left: 11px;
+  padding: 0 3px;
+  border-radius: 0 0 4px 4px;
+}
+
+/*# sourceMappingURL=index.css.map*/

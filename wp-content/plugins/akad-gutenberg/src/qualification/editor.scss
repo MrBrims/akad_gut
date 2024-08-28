@@ -1,0 +1,24 @@
+.wp-block-create-block-qualification-block .block-editor-inner-blocks>.block-editor-block-list__layout {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
+.wp-block-create-block-qualification-block .rich-text {
+	font-size: 16px;
+}
+
+.block-editor-block-list__block[data-title="Qualification Items"] {
+	margin: 0 !important;
+}
+
+.block-editor-inner-blocks>.block-editor-block-list__layout {
+	padding-bottom: 25px;
+}
+
+.qual-admin-item {
+	border: 1px solid #BBD1DC;
+	border-radius: 8px;
+	padding: 22px;
+	background-color: #fff;
+}

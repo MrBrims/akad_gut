@@ -1,0 +1,39 @@
+.wp-block-create-block-guarant-block .block-editor-inner-blocks>.block-editor-block-list__layout {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.block-editor-block-list__block[data-title="Guarant Item"] {
+	margin: 0 !important;
+}
+
+.guar-admin-item {
+	background-color: #fff;
+	border: 1px solid #bbd1dc;
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.guarant-admin-title {
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: #c13232;
+	font-size: 16px;
+	font-weight: 600;
+	font-family: Barlow, sans-serif;
+	text-align: center;
+}
+
+.guarant-admin-text {
+	margin: 10px 0;
+	font-size: 15px;
+	color: #002E5D;
+	line-height: 1.2;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}

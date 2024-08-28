@@ -1,0 +1,176 @@
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/stepsWork/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+.steps__title {
+  margin-bottom: 20px;
+  color: #002e5d;
+}
+.steps__text {
+  margin-bottom: 20px;
+}
+.steps__text h2 {
+  margin-bottom: 20px;
+  color: #002e5d;
+}
+.steps__text p {
+  margin-bottom: 15px;
+}
+.steps__text ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.steps__text li {
+  margin-bottom: 7px;
+}
+.steps__navigate {
+  display: flex;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-inline: auto;
+  gap: 30px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.steps__pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.steps__pagination span {
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  opacity: 1 !important;
+  background-color: #BBD1DC;
+}
+.steps__pagination span.swiper-pagination-bullet-active {
+  background-color: #325D9C;
+}
+.steps__prev, .steps__next {
+  width: 50px;
+  flex-shrink: 0;
+  height: 50px;
+  border: 1px solid #bbd1dc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.steps__prev:hover, .steps__next:hover {
+  opacity: 0.7;
+}
+.steps__prev.swiper-button-disabled, .steps__next.swiper-button-disabled {
+  opacity: 0.4;
+}
+.steps .disable-swipper .steps__item {
+  width: 100% !important;
+}
+.steps__items {
+  margin-bottom: 50px;
+  flex-direction: column;
+  gap: 15px;
+}
+.steps__item-inner {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 40px;
+  border: 1px solid #BBD1DC;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px 40px;
+  margin: 1px;
+}
+.steps__icon {
+  width: 130px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.steps__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-bottom: 15px;
+}
+.steps__num {
+  background-color: #f70431;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px 0 0 0;
+  position: relative;
+}
+.steps__num span {
+  position: absolute;
+  color: #fff;
+  font-size: 32px;
+  right: 2px;
+  bottom: 2px;
+  font-family: Barlow, sans-serif;
+  line-height: 1;
+}
+.steps__item-title {
+  font-size: 24px;
+  color: #002e5d;
+  position: relative;
+}
+.steps__btn {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+.steps__btn.btn.popup-link {
+  margin: auto;
+}
+
+@media (max-width: 880px) {
+  .steps__item-inner {
+    padding: 15px;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .steps__items {
+    flex-direction: row;
+    gap: 0;
+    align-items: stretch;
+  }
+  .steps__item {
+    display: flex;
+    min-height: 100%;
+    height: auto !important;
+  }
+  .steps__item-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    height: 100%;
+  }
+  .steps__btn {
+    margin-top: 0;
+  }
+  .steps__num {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .steps__head {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 690px) {
+  .steps__item-text {
+    text-align: left;
+  }
+}
+@media (max-width: 340px) {
+  .steps__pagination {
+    gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,0 +1,62 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/qualification/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+.qual {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  padding: 30px 0;
+}
+.qual__item {
+  border: 1px solid #BBD1DC;
+  border-radius: 8px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  gap: 15px;
+}
+.qual__img-box {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.qual__img-box::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #F3F8FF;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 100% 0 0;
+  z-index: -1;
+}
+.qual__img-box img {
+  max-width: 32px;
+  height: auto;
+}
+.qual__item-text {
+  margin-bottom: 0 !important;
+  color: #002e5d;
+  font-family: Barlow, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.qual__tippy {
+  align-items: center;
+  background-color: #f70431;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 10px;
+  height: 12px;
+  justify-content: center;
+  margin-right: auto;
+  width: 12px;
+}
