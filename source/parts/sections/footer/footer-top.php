@@ -6,7 +6,7 @@
 		</a>
 		<div class="footer__soc">
 			<?php foreach ((carbon_get_theme_option('footer_soc')) as $key) : ?>
-				<a class="footer__soc-link" href="<?php echo $key['footer_link_soc']; ?>">
+				<a class="footer__soc-link" rel="noopener noreferrer nofollow" target="_blank" href="<?php echo $key['footer_link_soc']; ?>">
 					<img class="footer__soc-icon" src="<?php echo $key['footer_icon_soc']; ?>" alt="<?php Helpers::imageAlt($key['footer_icon_soc']); ?>">
 				</a>
 			<?php endforeach; ?>

@@ -907,7 +907,7 @@ class GutenbergFields
 								<?php foreach ($fields['resp_rev'] as $key) : ?>
 									<div class="resp-rev__slide swiper-slide">
 										<div class="resp-rev__inner">
-											<a class="resp-rev__link" target="_blank" href="<?php echo $key['resp_rev_link']; ?>">
+											<a class="resp-rev__link" target="_blank" href="<?php echo $key['resp_rev_link']; ?>" rel="noopener noreferrer nofollow">
 												<?php echo $key['resp_rev_title']; ?>
 											</a>
 											<div class="resp-rev__star-box">
