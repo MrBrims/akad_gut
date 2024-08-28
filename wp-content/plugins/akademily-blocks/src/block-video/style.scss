@@ -1,0 +1,29 @@
+.video-wrapper {
+	display: block;
+	max-width: 700px;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid #5a89cf;
+	border-radius: 4px;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 47, 93, 0.245);
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 15%;
+		transition: width .3s ease-in-out;
+	}
+
+	&:hover svg {
+		width: 20%;
+	}
+}

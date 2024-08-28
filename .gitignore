@@ -8,7 +8,7 @@ debug.log
 **/src/PrivateConstants.php
 wp-content/themes/**
 wp-content/languages
-wp-content/plugins/**
+wp-content/plugins/*
 !wp-content/plugins/akad-gutenberg
 !wp-content/plugins/akademily-blocks
 wp-content/cache/**

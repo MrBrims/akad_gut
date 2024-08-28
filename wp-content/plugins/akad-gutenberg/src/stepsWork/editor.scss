@@ -1,0 +1,38 @@
+.block-editor-block-list__block[data-title="Step Work Item"] {
+	margin: 0 !important;
+}
+
+.step-admin-item[data-title="Step Work Item"] {
+	margin-bottom: 15px !important;
+	border: 1px solid #BBD1DC;
+	padding: 15px 40px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.step-admin-images {
+	max-width: 350px;
+}
+
+.step-admin-title {
+	color: #002e5d;
+	font-size: 24px;
+	margin-bottom: 15px !important;
+	margin-top: 5px !important;
+}
+
+.step-admin-text {
+	font-size: 17px;
+	line-height: 1.6 !important;
+	margin-top: 0;
+}
+
+.step-admin-button {
+	display: block;
+	max-width: fit-content;
+	padding: 8px 10px;
+	background-color: #f70431;
+	color: #fff;
+}
