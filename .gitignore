@@ -7,7 +7,10 @@ debug.log
 **/src/Feedback**.php
 **/src/PrivateConstants.php
 wp-content/themes/**
+wp-content/languages
 wp-content/plugins/**
+!wp-content/plugins/akad-gutenberg
+!wp-content/plugins/akademily-blocks
 wp-content/cache/**
 wp-content/wp-rocket-config/**
 !**/src/Feedback.php
