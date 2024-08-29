@@ -38,3 +38,19 @@ function akad_gut_plugin_styles()
 	wp_enqueue_style('akad-gut-plugin-style', plugins_url('css/style.css', __FILE__));
 }
 add_action('admin_enqueue_scripts', 'akad_gut_plugin_styles');
+
+function my_block_categories($categories)
+{
+	$my_category = array(
+		'slug' => 'custom-akad-category',
+		'title' => __('Блоки Академили'),
+		'icon'  => 'welcome-learn-more',
+	);
+
+	// Добавляем мою категорию в начало массива
+	array_unshift($categories, $my_category);
+
+	return $categories;
+}
+
+add_filter('block_categories_all', 'my_block_categories');
