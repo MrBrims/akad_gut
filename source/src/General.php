@@ -33,25 +33,8 @@ class General
 		// Подключение js и css для админки
 		add_action('admin_enqueue_scripts', [$this, 'adminStyleScript'], 99);
 		add_action('rest_api_init', [$this, 'akadJson']);
-
-		// Регистрация кастомной категории для гутенберга
-		add_filter('block_categories_all', [$this, 'my_block_categories']);
 	}
 
-	// Регистрация кастомной категории для гутенберга
-	public function my_block_categories($categories)
-	{
-		$my_category = array(
-			'slug' => 'custom-akad-category',
-			'title' => __('Блоки Академили'),
-			'icon'  => 'welcome-learn-more',
-		);
-
-		// Добавляем мою категорию в начало массива
-		array_unshift($categories, $my_category);
-
-		return $categories;
-	}
 
 	public function akadJson()
 	{
