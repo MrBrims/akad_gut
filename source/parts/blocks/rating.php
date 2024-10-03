@@ -1,5 +1,5 @@
 <div class="rating">
-    <a href="https://www.google.com/search?q=akademily+reviews&oq=akademily+reviews" target="_blank" class="rating__inner" rel="noopener noreferrer nofollow">
+    <a href="https://www.google.com/search?q=akademily+reviews&oq=akademily+reviews" target="_blank" class="rating__inner">
         <img class="rating__logo" src="<?php echo get_template_directory_uri() ?>/resources/images/rating_logo/goo.webp" alt="google logo">
         <div class="rating__box">
             <?php
@@ -19,7 +19,7 @@
             ?>
         </div>
     </a>
-    <a href="https://www.provenexpert.com/academily-de/" target="_blank" class="rating__inner" rel="noopener noreferrer nofollow">
+    <a href="https://www.provenexpert.com/academily-de/" target="_blank" class="rating__inner">
         <img class="rating__logo" src="<?php echo get_template_directory_uri() ?>/resources/images/rating_logo/pro.webp" alt="provent logo">
         <div class="rating__box">
             <?php
