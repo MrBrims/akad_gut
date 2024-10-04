@@ -100,7 +100,7 @@
 		</label>
 	</p>
 	<input class="form-main__btn btn" type="submit" value="DAS FORMULAR abschicken">
-	<input type="hidden" name="form_type" value="big-form">
+	<input type="hidden" name="form-id" value="big-form">
 	<input type="hidden" name="coaching_condition" value="<?php echo Helpers::coach_cond(); ?>">
 	<input type="hidden" name="page_link" value="<?php echo get_permalink(); ?>">
 	<input type="hidden" name="recaptcha_response" id="recaptchaResponse">

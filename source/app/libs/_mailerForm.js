@@ -36,9 +36,7 @@ export function mailerForm() {
 
 	function mailer() {
 		const forms = document.querySelectorAll('form:not(.search-label)')
-		if (!forms.length) {
-			return
-		}
+		if (!forms.length) return
 
 		for (let form of forms) {
 			form.action = 'sendForm'

@@ -39,7 +39,7 @@
 		Die Hinweise aus der <span>Datenschutzerklärung</span> und den <span>AGB</span> habe ich gelesen und akzeptiere diese.
 	</p>
 
-	<input type="hidden" name="form_type" value="middle-form">
+	<input type="hidden" name="form-id" value="middle-form">
 	<input type="hidden" name="coaching_condition" value="<?php echo Helpers::coach_cond(); ?>">
 	<input type="hidden" name="page_link" value="<?php echo get_permalink(); ?>">
 	<input type="hidden" name="recaptcha_response" id="recaptchaResponse">

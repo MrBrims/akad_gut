@@ -12,7 +12,7 @@
 		</div>
 	</div>
 
-	<input type="hidden" name="form_type" value="blitz-form">
+	<input type="hidden" name="form-id" value="blitz-form">
 	<input type="hidden" name="page_link" value="<?php echo get_permalink(); ?>">
 	<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 	<input type="hidden" name="page" value="<?php echo $post->post_title; ?>" />
