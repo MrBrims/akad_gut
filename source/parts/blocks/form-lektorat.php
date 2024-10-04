@@ -38,7 +38,7 @@
 	</div>
 	<input class="form__btn btn" type="submit" value="UNVERBINDLICH ANFRAGEN">
 
-	<input type="hidden" name="form_type" value="hero-form">
+	<input type="hidden" name="form-id" value="hero-form">
 	<input type="hidden" name="coaching_condition" value="<?php echo Helpers::coach_cond(); ?>">
 	<input type="hidden" name="page_link" value="<?php echo get_permalink(); ?>">
 	<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
